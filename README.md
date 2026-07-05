@@ -262,7 +262,6 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 ## Demostracion en Video (60 Segundos)
 
 
-👉 **[Haz clic aqui para ver el Video Demostrativo]
 
 ---
 
