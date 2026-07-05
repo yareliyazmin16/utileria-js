@@ -247,17 +247,14 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ```
 
----
+
 
 ## Capturas de Pantalla (Consola mostrando resultados)
 
+![alt text](image.png)
 
 
-* **Errores de validacion capturados en consola:** `![Consola Errores](img/captura_consola_errores.png)`
-* **Despliegue de ventana modal interactiva con edad calculada:** `![Modal Exito](img/captura_modal.png)`
-* **Modulo de Login interceptando accesos invalidos:** `![Login Activo](img/captura_login.png)`
 
----
 
 ## Demostracion en Video (60 Segundos)
 
