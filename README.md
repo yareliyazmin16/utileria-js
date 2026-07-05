@@ -28,7 +28,7 @@ Funciones Obligatorias
 
 #### 1. validarCorreo(correo)
 
-Comprueba si el correo electronico ingresado cumple con una estructura estandar global mediante expresiones regulares.
+Comprueba si el correo electronico ingresado cumple con una estructura estandar mediante expresiones regulares.
 
 ```javascript
 function validarCorreo(correo) {
@@ -126,7 +126,7 @@ if (esMayorDeEdad(fechaInput)) {
 
 #### 6. validarPassword(password)
 
-Evalua que la contraseña cumpla con criterios de seguridad: minimo 8 caracteres, una mayuscula, una minuscula, un numero y un caracter especial.
+Evalua que la contraseña cumpla con criterios de seguridad: minimo 8 carácteres, una mayuscula, una minuscula, un número y un carácter especial.
 
 ```javascript
 function validarPassword(password) {
@@ -147,7 +147,7 @@ if (!validarPassword(passInput)) {
 
 #### 1. validarCURP(curp)
 
-* Transforma la cadena a mayusculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres. 
+* Transforma la cadena a mayúsculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres. 
 
 ```javascript
 function validarCURP(curp) {
@@ -165,7 +165,7 @@ if (!validarCURP(curpInput)) {
 
 #### 2. validarSemestre(anioIngreso, semestreActual)
 
-*  Aplica una regla de consistencia temporal en JavaScript. Evalua la diferencia entre el año actual (2026) y el año de ingreso del alumno para determinar el limite maximo de semestres que ha podido cursar de forma logica (maximo 2 semestres por año fisico más un margen de tolerancia).
+*  Aplica una regla de consistencia temporal en JavaScript. Evalua la diferencia entre el año actual (2026) y el año de ingreso del alumno para determinar el límite máximo de semestres que ha podido cursar de forma lógica (máximo 2 semestres por año fisico más un margen de tolerancia).
 
 
 ```javascript
@@ -222,7 +222,7 @@ if (!validarHorarioEscolar("08:00", "13:00")) {
 
 #### 4. validarPesoArchivo(archivoObjeto, maxMB)
 
-* Accede directamente a la propiedad de tamaño binario del archivo seleccionado en el DOM para verificar que no sobrepase el peso en Megabytes configurado.
+* Accede directamente a la propiedad de tamaño binario del archivo seleccionado para verificar que no sobrepase el peso en Megabytes configurado.
 
 
 ```javascript
@@ -247,7 +247,11 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ## Capturas de Pantalla (Consola mostrando resultados)
 
-![alt text](image.png)
+* validarCorreo: 
+![alt text](image-1.png)
+
+ Bloqueo de sintaxis incorrecta en el input de correo electrónico.
+
 
 
 
