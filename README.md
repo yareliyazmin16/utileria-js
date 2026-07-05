@@ -1,33 +1,33 @@
+Aquí tienes tu documento `README.md` corregido con todos los acentos ortográficos (tildes) colocados correctamente tanto en la documentación como en los comentarios dentro de los bloques de código JavaScript (respetando la sintaxis del código para que no afecte su funcionamiento).
+
 ```markdown
 Librería para el uso en Validación de Datos para Formularios Universitarios
 
-* Nombre del Alumno: Yareli Yazmin Pacheco Aragon
+* Nombre del Alumno: Yareli Yazmin Pacheco Aragón
 * Semestre: Sexto Semestre Grupo: B 
-* Carrera: Ingenieria en Sistemas Computacionales
-* Materia: Programacion Web
+* Carrera: Ingeniería en Sistemas Computacionales
+* Materia: Programación Web
 
-¿Que problema resuelve este proyecto?
-Este proyecto resuelve la validacion y consistencia de datos en el lado del cliente para un formulario tipo de de control escolar universitario. A traves de JavaScript , la libreria verifica los datos proporcionados por el estudiante,  asegurando que los datos escolares cumplan con las reglas de negocio de la institucion desde el navegador del usuario.
+¿Qué problema resuelve este proyecto?
+Este proyecto resuelve la validación y consistencia de datos en el lado del cliente para un formulario tipo de control escolar universitario. A través de JavaScript, la librería verifica los datos proporcionados por el estudiante, asegurando que los datos escolares cumplan con las reglas de negocio de la institución desde el navegador del usuario.
 
 
 
-Instalacion
-Para integrar esta libreria en cualquier documento HTML de la plataforma, se debe almacenar el archivo en el directorio correspondiente de scripts e importarlo al final del cuerpo del documento, asegurando su carga antes del script  principal:
+Instalación
+Para integrar esta librería en cualquier documento HTML de la plataforma, se debe almacenar el archivo en el directorio correspondiente de scripts e importarlo al final del cuerpo del documento, asegurando su carga antes del script principal:
 
 ```html
 <script src="js/utileria.js"></script>
 
 ```
 
-
-
-Uso y Ejemplos de Codigo 
+Uso y Ejemplos de Código
 
 Funciones Obligatorias
 
 #### 1. validarCorreo(correo)
 
-Comprueba si el correo electronico ingresado cumple con una estructura estandar mediante expresiones regulares.
+Comprueba si el correo electrónico ingresado cumple con una estructura estándar mediante expresiones regulares.
 
 ```javascript
 function validarCorreo(correo) {
@@ -35,19 +35,19 @@ function validarCorreo(correo) {
     return expresion.test(correo); 
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var correoInput = "yareli@correo.com";
 if (!validarCorreo(correoInput)) {
-    console.log("Error: El formato del correo electronico es incorrecto.");
+    console.log("Error: El formato del correo electrónico es incorrecto.");
 } else {
-    console.log("Validacion exitosa: Correo estructurado correctamente.");
+    console.log("Validación exitosa: Correo estructurado correctamente.");
 }
 
 ```
 
 #### 2. soloLetras(texto)
 
-Filtra cadenas de texto para asegurar que contengan unicamente letras (mayusculas o minusculas), espacios y caracteres acentuados o la letra n.
+Filtra cadenas de texto para asegurar que contengan únicamente letras (mayúsculas o minúsculas), espacios y caracteres acentuados o la letra ñ.
 
 ```javascript
 function soloLetras(texto) {
@@ -55,7 +55,7 @@ function soloLetras(texto) {
     return expresion.test(texto);
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var nombreInput = "Yareli Yazmin";
 if (!soloLetras(nombreInput)) {
     alert("El campo nombre solo acepta letras, acentos y espacios.");
@@ -65,7 +65,7 @@ if (!soloLetras(nombreInput)) {
 
 #### 3. validarLongitud(numero, maxLongitud)
 
-Convierte un valor numerico a tipo String y evalua si su cantidad de digitos es menor o igual al limite maximo permitido.
+Convierte un valor numérico a tipo String y evalúa si su cantidad de dígitos es menor o igual al límite máximo permitido.
 
 ```javascript
 function validarLongitud(numero, maxLongitud) {
@@ -73,10 +73,10 @@ function validarLongitud(numero, maxLongitud) {
     return cadenaNumero.length <= maxLongitud;
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var codigoEstudiante = 12345;
 if (!validarLongitud(codigoEstudiante, 5)) {
-    console.error("El codigo numerico supera el limite de 5 caracteres.");
+    console.error("El código numérico supera el límite de 5 caracteres.");
 }
 
 ```
@@ -99,15 +99,15 @@ function calcularEdad(fechaNacimiento) {
     return edad; 
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var edadCalculada = calcularEdad("2002-05-15");
-console.log("Resultado matematico: El alumno tiene " + edadCalculada + " anos.");
+console.log("Resultado matemático: El alumno tiene " + edadCalculada + " años.");
 
 ```
 
 #### 5. esMayorDeEdad(fechaNacimiento)
 
-Determina si la fecha de nacimiento ingresada corresponde a un usuario con 18 años o mas apoyandose en la funcion de calculo de edad.
+Determina si la fecha de nacimiento ingresada corresponde a un usuario con 18 años o más apoyándose en la función de cálculo de edad.
 
 ```javascript
 function esMayorDeEdad(fechaNacimiento) {
@@ -115,17 +115,17 @@ function esMayorDeEdad(fechaNacimiento) {
     return edadCalculada >= 18; 
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var fechaInput = "2002-05-15";
 if (esMayorDeEdad(fechaInput)) {
-    console.log("Estatus verificado: Mayor de edad habilitado para el padron escolar.");
+    console.log("Estatus verificado: Mayor de edad habilitado para el padrón escolar.");
 }
 
 ```
 
 #### 6. validarPassword(password)
 
-Evalua que la contraseña cumpla con criterios de seguridad: minimo 8 carácteres, una mayuscula, una minuscula, un número y un carácter especial.
+Evalúa que la contraseña cumpla con criterios de seguridad: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.
 
 ```javascript
 function validarPassword(password) {
@@ -133,20 +133,19 @@ function validarPassword(password) {
     return expresion.test(password);
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var passInput = "Sistemas2026#";
 if (!validarPassword(passInput)) {
-    alert("La contrasena debe incluir mayusculas, minusculas, numeros y caracteres especiales.");
+    alert("La contraseña debe incluir mayúsculas, minúsculas, números y caracteres especiales.");
 }
 
 ```
 
-
-### Otras Funciones Implementadas  
+### Otras Funciones Implementadas
 
 #### 1. validarCURP(curp)
 
-* Transforma la cadena a mayúsculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres. 
+* Transforma la cadena a mayúsculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres.
 
 ```javascript
 function validarCURP(curp) {
@@ -154,18 +153,17 @@ function validarCURP(curp) {
     return expresion.test(curp.toUpperCase());
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var curpInput = "PAAY020515HOCRRR01";
 if (!validarCURP(curpInput)) {
-    alert("La estructura de la CURP ingresada es invalida.");
+    alert("La estructura de la CURP ingresada es inválida.");
 }
 
 ```
 
 #### 2. validarSemestre(anioIngreso, semestreActual)
 
-*  Aplica una regla de consistencia temporal en JavaScript. Evalua la diferencia entre el año actual (2026) y el año de ingreso del alumno para determinar el límite máximo de semestres que ha podido cursar de forma lógica (máximo 2 semestres por año fisico más un margen de tolerancia).
-
+* Aplica una regla de consistencia temporal en JavaScript. Evalúa la diferencia entre el año actual (2026) y el año de ingreso del alumno para determinar el límite máximo de semestres que ha podido cursar de forma lógica (máximo 2 semestres por año físico más un margen de tolerancia).
 
 ```javascript
 function validarSemestre(anioIngreso, semestreActual) {
@@ -181,17 +179,16 @@ function validarSemestre(anioIngreso, semestreActual) {
     return semestre <= maxSemestrePosible;
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 if (!validarSemestre(2025, 8)) {
-    alert("Error logico: Un alumno que ingreso en 2025 no puede cursar el 8vo semestre en 2026.");
+    alert("Error lógico: Un alumno que ingresó en 2025 no puede cursar el 8vo semestre en 2026.");
 }
 
 ```
 
 #### 3. validarHorarioEscolar(horaInicio, horaFin)
 
-*  Convierte las cadenas de tiempo a minutos absolutos para asegurar que el horario pertenezca a la jornada universitaria (07:00 a 20:00 hrs) y que la hora de salida no sea previa a la de entrada.
-
+* Convierte las cadenas de tiempo a minutos absolutos para asegurar que el horario pertenezca a la jornada universitaria (07:00 a 20:00 hrs) y que la hora de salida no sea previa a la de entrada.
 
 ```javascript
 function validarHorarioEscolar(horaInicio, horaFin) {
@@ -212,7 +209,7 @@ function validarHorarioEscolar(horaInicio, horaFin) {
     return true;
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 if (!validarHorarioEscolar("08:00", "13:00")) {
     alert("Horario escolar rechazado por inconsistencia de horas o desfase de turno.");
 }
@@ -222,7 +219,6 @@ if (!validarHorarioEscolar("08:00", "13:00")) {
 #### 4. validarPesoArchivo(archivoObjeto, maxMB)
 
 * Accede directamente a la propiedad de tamaño binario del archivo seleccionado para verificar que no sobrepase el peso en Megabytes configurado.
-
 
 ```javascript
 function validarPesoArchivo(archivoObjeto, maxMB) {
@@ -234,11 +230,17 @@ function validarPesoArchivo(archivoObjeto, maxMB) {
     return pesoEnMB <= maxMB; 
 }
 
-// Ejemplo de ya implementado:
+// Ejemplo ya implementado:
 var inputDocumento = document.getElementById("cargaAcademica").files[0];
 if (!validarPesoArchivo(inputDocumento, 2)) {
-    alert("El archivo PDF de la carga academica excede el tamano limite de 2 MB.");
+    alert("El archivo PDF de la carga académica excede el tamaño límite de 2 MB.");
 }
+
+```
+
+```
+
+```
 
 ```
 
