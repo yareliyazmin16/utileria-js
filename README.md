@@ -1,4 +1,4 @@
-Aquí tienes tu documento `README.md` corregido con todos los acentos ortográficos (tildes) colocados correctamente tanto en la documentación como en los comentarios dentro de los bloques de código JavaScript (respetando la sintaxis del código para que no afecte su funcionamiento).
+
 
 ```markdown
 Librería para el uso en Validación de Datos para Formularios Universitarios
