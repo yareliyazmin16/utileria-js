@@ -17,7 +17,7 @@ function procesarFormulario() {
 
     if (archivo.files.length === 0) {
         console.log("Error: Archivo no adjuntado");
-        alert("Por favor adjunta tu archivo de Carga Académica");
+        alert("Por favor adzjunta tu archivo de Carga Académica");
         return;
     }
 

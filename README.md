@@ -1,7 +1,6 @@
 ```markdown
-Librería de Validación y Consistencia de Datos para Formularios Universitarios
+Librería para el uso en Validación de Datos para Formularios Universitarios
 
-Portada e Informacion General
 * Nombre del Alumno: Yareli Yazmin Pacheco Aragon
 * Semestre: Sexto Semestre Grupo: B 
 * Carrera: Ingenieria en Sistemas Computacionales
@@ -252,7 +251,10 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 Prueba de validación de correo electrónico. Al ingresar un correo sin el símbolo @, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript. 
 
+* validarPassword:
+
 ![alt text](image-1.png)
+Prueba de validación de contraseña segura. Al ingresar una contraseña que no cumple con los requisitos,  el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
 
 
 
