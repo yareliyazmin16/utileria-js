@@ -238,11 +238,6 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ```
 
-```
-
-```
-
-```
 
 
 
