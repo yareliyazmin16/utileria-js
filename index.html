@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        <h1>Formulario de Registro</h1>
+        <p class="subtitulo">Completa los datos que se solicitan</p>
+
+
+        <form class="formulario" onsubmit="return false;">
+           
+            <div class="grupo-formulario">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+            </div>
+
+
+            <div class="grupo-formulario">
+                <label for="codigo">Ingresa tu código (Recuerda que son Máximo 5 dígitos)</label>
+                <input type="number" id="codigo" placeholder="Ej. 12345">
+            </div>
+
+
+            <div class="grupo-formulario">
+                <label for="curp">CURP (18 caracteres)</label>
+                <input type="text" id="curp" placeholder="Ingresa tu CURP" maxlength="18">
+            </div>
+
+
+            <div style="display: flex; gap: 15px;" >
+                
+                <div class="grupo-formulario" style="flex: 1;">
+                    <label for="anioIngreso">Año de Ingreso</label>
+                    <input type="number" id="anioIngreso" placeholder="Ej. 2024" min="1">
+                </div>
+
+
+                <div class="grupo-formulario" style="flex: 1;">
+                    <label for="semestre">Semestre (1-12)</label>
+                    <input type="number" id="semestre" placeholder="Ej. 5" min="1" max="12">
+                </div>
+            
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="fechaNac">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNac">
+            </div>
+
+            <label   >
+                Horario Escolar (Límite: 7:00 AM a 8:00 PM)
+            </label>
+      
+
+            <div style="display: flex; gap: 15px; ">
+              
+                <div style="flex: 1;">
+                    <label for="horaInicio">Hora Entrada</label>
+                    <input type="time" id="horaInicio">
+                </div>
+               
+                <div style="flex: 1;">
+                    <label for="horaFin" >Hora Salida</label>
+                    <input type="time" id="horaFin">
+                </div>
+
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="cargaAcademica">Subir Carga Académica PDF (Máx. 2 MB)</label>
+                <input type="file" id="cargaAcademica" accept=".pdf">
+            </div>
+
+            <button type="button" class="boton-enviar" onclick="procesarFormulario()">
+                VALIDAR Y VERIFICAR EDAD
+            </button>
+
+        </form>
+    </div>
+
+    <div id="Modal" class="modal-fondo">
+        
+        <div class="modal-contenido">
+            <h2 > Tu información </h2>
+           
+            <p id="modalTexto" ></p>
+            <button type="button" class="boton-enviar" onclick="cerrarModal()">
+                OK
+            </button>
+        </div>
+        
+    </div>
+
+    <script src="js/utileria.js"></script>
+
+    <script src="js/formulario.js"></script> 
+</body>
+
+</html>

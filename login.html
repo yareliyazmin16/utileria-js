@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="contenedor-formulario">
+        
+        <h1>Iniciar Sesión</h1>
+        <p class="subtitulo">Ingresa tus datos para acceder al sistema</p>
+
+        <form class="formulario" onsubmit="return false;">
+            
+            <div class="grupo-formulario">
+                <label for="correo">Correo Electrónico</label>
+                <input type="text" id="correo" placeholder="ejemplo@correo.com">
+            </div>
+
+        
+            <div class="grupo-formulario">
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="Contraseña" placeholder="Mínimo 8 caracteres, mayúscula, número y símbolo">
+            </div>
+
+            <button type="button" class="boton-enviar" onclick="procesarLogin()">
+                INGRESAR
+            </button>
+
+        </form>
+    </div>
+
+    <script src="js/utileria.js"></script>
+
+    <script src="js/login.js"></script>
+        
+    
+</body>
+</html>
