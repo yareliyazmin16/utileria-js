@@ -1,20 +1,20 @@
 ```markdown
-# Sistema de Control Escolar Universitario - Libreria utileria.js
+Sistema de Control Escolar Universitario - Libreria utileria.js
 
-## Portada e Informacion General
+Portada e Informacion General
 * **Nombre del Alumno:** Yareli Yazmin Pacheco Aragon
 * **Semestre:** Sexto Semestre
 * **Carrera:** Ingenieria en Sistemas Computacionales
 * **Materia:** Programacion Web
 
-### Que problema resuelve este proyecto?
+¿Que problema resuelve este proyecto?
 Este proyecto resuelve la validacion y consistencia de datos en el lado del cliente para una plataforma universitaria de control escolar. A traves de JavaScript puro (Vanilla JS), la libreria intercepta los flujos de autenticacion (login.html) y registro de estudiantes (index.html) antes de que la informacion sea enviada al servidor. 
 
 El objetivo principal es optimizar el rendimiento del sistema, previniendo el almacenamiento de informacion incorrecta en la base de datos, controlando el peso de los archivos cargados para no saturar el almacenamiento y asegurando que los datos escolares cumplan con las reglas de negocio de la institucion desde el navegador del usuario.
 
 ---
 
-## Instalacion
+Instalacion
 Para integrar esta libreria en cualquier documento HTML de la plataforma, se debe almacenar el archivo en el directorio correspondiente de scripts e importarlo al final del cuerpo del documento, asegurando su carga antes del script controlador principal:
 
 ```html
@@ -24,9 +24,9 @@ Para integrar esta libreria en cualquier documento HTML de la plataforma, se deb
 
 ---
 
-## Uso y Ejemplos de Codigo (Documentacion Codigo Fuente)
+Uso y Ejemplos de Codigo 
 
-### Funciones Obligatorias
+Funciones Obligatorias
 
 #### 1. validarCorreo(correo)
 
@@ -146,7 +146,7 @@ if (!validarPassword(passInput)) {
 
 ---
 
-### Funciones de la Seccion Libre (Creatividad)
+### Funciones de la Seccion Libre 
 
 #### 1. validarCURP(curp)
 
