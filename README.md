@@ -248,9 +248,11 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 ## Capturas de Pantalla (Consola mostrando resultados)
 
 * validarCorreo: 
-![alt text](image-1.png)
+![alt text](image.png)
 
- Bloqueo de sintaxis incorrecta en el input de correo electrónico.
+Prueba de validación de correo electrónico. Al ingresar un correo sin el símbolo @, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript. 
+
+![alt text](image-1.png)
 
 
 

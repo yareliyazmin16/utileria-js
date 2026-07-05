@@ -10,51 +10,51 @@ function procesarFormulario() {
     var archivo = document.getElementById("cargaAcademica");
 
     if (!Nombre || !numCodigo || !Curp || !numAnio || !numSemestre || !Fecha || !HoraInicio || !HoraFin) {
-        alert("Completa todos los campos del formulario");
         console.log("Error: Campos del formulario incompletos");
+        alert("Completa todos los campos del formulario");
         return;
     }
 
     if (archivo.files.length === 0) {
-        alert("Por favor adjunta tu archivo de Carga Académica");
         console.log("Error: Archivo no adjuntado");
+        alert("Por favor adjunta tu archivo de Carga Académica");
         return;
     }
 
     if (!soloLetras(Nombre)) {
-        alert("El nombre solo debe contener letras y espacios ");
         console.log("Error: Nombre invalido - " + Nombre);
+        alert("El nombre solo debe contener letras y espacios ");
         return;
     }
 
     if (!validarLongitud(numCodigo, 5)) {
+        console.log("Error: Longitud de codigo valida - " + numCodigo);
         alert("El código numérico es inválido. No debe superar los 5 dígitos");
-        console.log("Error: Longitud de codigo invalida - " + numCodigo);
         return;
     }
 
     if (!validarCURP(Curp)) {
-        alert("La CURP ingresada no tiene un formato válido de 18 caracteres");
         console.log("Error: Formato de CURP invalido - " + Curp);
+        alert("La CURP ingresada no tiene un formato válido de 18 caracteres");
         return;
     }
 
     if (!validarSemestre(numAnio, numSemestre)) {
-        alert("El semestre ingresado no concuerda con el año de ingreso");
         console.log("Error: Incoherencia en semestre y año de ingreso - Año: " + numAnio + ", Semestre: " + numSemestre);
+        alert("El semestre ingresado no concuerda con el año de ingreso");
         return;
     }
 
     if (!validarHorarioEscolar(HoraInicio, HoraFin)) {
-        alert(" Las clases deben pertenecer al horario de 07:00 a 20:00 hrs");
         console.log("Error: Horario escolar fuera de rango o invertido - Inicio: " + HoraInicio + ", Fin: " + HoraFin);
+        alert(" Las clases deben pertenecer al horario de 07:00 a 20:00 hrs");
         return;
     }
 
     var elArchivo = archivo.files[0];
     if (!validarPesoArchivo(elArchivo, 2)) { 
-        alert("El archivo supera el peso máximo permitido de 2 MB.");
         console.log("Error: El archivo " + elArchivo.name + " supera el limite de peso permitido");
+        alert("El archivo supera el peso máximo permitido de 2 MB.");
         return;
     }
 
@@ -64,6 +64,7 @@ function procesarFormulario() {
     console.log("Validacion exitosa de todos los campos");
     console.log("Edad calculada: " + edadCalculada + " anos");
     console.log("Mayor de edad: " + mayorDeEdad);
+    console.log("Ventana modal desplegada");
 
     var mensajeModal = "Hola <b>" + Nombre.toUpperCase() + "</b>.<br><br>" +
                        "<b>Edad calculada:</b> " + edadCalculada + " años.<br>" +
@@ -80,10 +81,9 @@ function procesarFormulario() {
 
     document.getElementById("modalTexto").innerHTML = mensajeModal;
     document.getElementById("Modal").style.display = "flex";
-    console.log("Ventana modal desplegada");
 }
 
 function cerrarModal() {
-    document.getElementById("Modal").style.display = "none";
     console.log("Ventana modal cerrada");
+    document.getElementById("Modal").style.display = "none";
 }
