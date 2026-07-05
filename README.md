@@ -246,6 +246,8 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ## Capturas de Pantalla (Consola mostrando resultados)
 
+*Login
+
 * validarCorreo: 
 ![alt text](image.png)
 
@@ -256,11 +258,55 @@ Prueba de validación de correo electrónico. Al ingresar un correo sin el símb
 ![alt text](image-1.png)
 Prueba de validación de contraseña segura. Al ingresar una contraseña que no cumple con los requisitos,  el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
 
+* Los datos son correctos: 
+![alt text](image-19.png)
+![alt text](image-20.png)
+Prueba de inicio de sesión exitoso. Al ingresar un correo electrónico y una contraseña válidos que cumplen con todos los requisitos de seguridad establecidos, el sistema procesa las credenciales correctamente, confirma la validación y genera el registro de usuario autenticado en la consola de JavaScript.
 
 
+* validarCamposObligatorios:
 
+![alt text](image-3.png)
+![alt text](image-4.png)
 
-## Demostracion en Video (60 Segundos)
+Prueba de validación de campos vacíos. Al presionar el botón sin llenar todos los inputs obligatorios del formulario, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript. 
+
+* validarNombre:
+![alt text](image-5.png)
+![alt text](image-6.png)
+
+Prueba de validación de nombre. Al ingresar un nombre con números o caracteres no permitidos, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
+
+* validarCodigo:
+![alt text](image-7.png)
+![alt text](image-8.png)
+Prueba de validación de código numérico. Al ingresar un código que supera el límite de 5 dígitos establecido, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
+
+* validarCURP:
+![alt text](image-9.png)
+![alt text](image-10.png)
+Prueba de validación de CURP. Al ingresar una CURP que no cumple con el formato requerido de 18 caracteres, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
+
+* validarSemestre:
+![alt text](image-12.png)
+![alt text](image-13.png)
+Prueba de validación de congruencia escolar. Al ingresar un semestre que no concuerda lógicamente con el año de ingreso, el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
+
++ validarHorarioEscolar:
+![alt text](image-14.png)
+![alt text](image-15.png)
+Prueba de validación de límites de horario escolar. Al ingresar una hora de entrada o salida que se encuentra fuera del rango permitido (07:00 a 20:00 hrs), el sistema detecta que el formato es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript.
+
+* validarTamanoArchivo:
+![alt text](image-16.png)
+![alt text](image-17.png)
+Prueba de validación de tamaño de archivo. Al cargar un documento PDF que supera el límite máximo establecido de 2 MB, el sistema detecta que el peso es incorrecto, muestra una alerta al usuario y guarda el registro del error en la consola de JavaScript. 
+
+* Los datos son correctos: 
+![alt text](image-18.png)
+Prueba de validación exitosa. Al ingresar correctamente todos los campos obligatorios con formatos válidos y coherentes, el sistema procesa la información de manera correcta y despliega una ventana modal con el resumen de los datos del estudiante. 
+
+## Demostracion en Video 
 
 https://drive.google.com/drive/folders/1IVO0dJXtrxiqfOfqzKfB2sr-8UgIFBPp?usp=sharing 
 
