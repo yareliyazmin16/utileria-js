@@ -251,7 +251,7 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ## Capturas de Pantalla (Consola mostrando resultados)
 
-*(Nota: Guarda tus capturas de pantalla en formato .png dentro de la carpeta /img de tu proyecto para que se visualicen correctamente)*
+
 
 * **Errores de validacion capturados en consola:** `![Consola Errores](img/captura_consola_errores.png)`
 * **Despliegue de ventana modal interactiva con edad calculada:** `![Modal Exito](img/captura_modal.png)`
@@ -261,16 +261,12 @@ if (!validarPesoArchivo(inputDocumento, 2)) {
 
 ## Demostracion en Video (60 Segundos)
 
-A continuacion se presenta el enlace al video demostrativo de tipo pitch donde expongo el funcionamiento de la libreria en vivo, el manejo de excepciones y el despliegue dinamico de la interfaz:
 
-👉 **[Haz clic aqui para ver el Video Demostrativo](AQUI_PEGA_TU_LINK_DE_YOUTUBE_O_DRIVE)**
+👉 **[Haz clic aqui para ver el Video Demostrativo]
 
 ---
 
-## Enlaces del Proyecto (GitHub Pages)
 
-* **Repositorio en GitHub:** [https://github.com/tu-usuario/utileria](https://github.com/tu-usuario/utileria)
-* **Demostracion en vivo (GitHub Pages):** [https://tu-usuario.github.io/utileria/](https://tu-usuario.github.io/utileria/)
 
 ```
 
