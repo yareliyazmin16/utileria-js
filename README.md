@@ -1,28 +1,26 @@
 ```markdown
-Sistema de Control Escolar Universitario - Libreria utileria.js
+Librería de Validación y Consistencia de Datos para Formularios Universitarios
 
 Portada e Informacion General
-* **Nombre del Alumno:** Yareli Yazmin Pacheco Aragon
-* **Semestre:** Sexto Semestre
-* **Carrera:** Ingenieria en Sistemas Computacionales
-* **Materia:** Programacion Web
+* Nombre del Alumno: Yareli Yazmin Pacheco Aragon
+* Semestre: Sexto Semestre Grupo: B 
+* Carrera: Ingenieria en Sistemas Computacionales
+* Materia: Programacion Web
 
 ¿Que problema resuelve este proyecto?
-Este proyecto resuelve la validacion y consistencia de datos en el lado del cliente para una plataforma universitaria de control escolar. A traves de JavaScript puro (Vanilla JS), la libreria intercepta los flujos de autenticacion (login.html) y registro de estudiantes (index.html) antes de que la informacion sea enviada al servidor. 
+Este proyecto resuelve la validacion y consistencia de datos en el lado del cliente para un formulario tipo de de control escolar universitario. A traves de JavaScript , la libreria verifica los datos proporcionados por el estudiante,  asegurando que los datos escolares cumplan con las reglas de negocio de la institucion desde el navegador del usuario.
 
-El objetivo principal es optimizar el rendimiento del sistema, previniendo el almacenamiento de informacion incorrecta en la base de datos, controlando el peso de los archivos cargados para no saturar el almacenamiento y asegurando que los datos escolares cumplan con las reglas de negocio de la institucion desde el navegador del usuario.
 
----
 
 Instalacion
-Para integrar esta libreria en cualquier documento HTML de la plataforma, se debe almacenar el archivo en el directorio correspondiente de scripts e importarlo al final del cuerpo del documento, asegurando su carga antes del script controlador principal:
+Para integrar esta libreria en cualquier documento HTML de la plataforma, se debe almacenar el archivo en el directorio correspondiente de scripts e importarlo al final del cuerpo del documento, asegurando su carga antes del script  principal:
 
 ```html
 <script src="js/utileria.js"></script>
 
 ```
 
----
+
 
 Uso y Ejemplos de Codigo 
 
@@ -68,7 +66,7 @@ if (!soloLetras(nombreInput)) {
 
 #### 3. validarLongitud(numero, maxLongitud)
 
-Convierte un valor numerico a tipo String y evalua si su cantidad de digitos es menor o igual al limite maximo permitido (usado para el codigo escolar).
+Convierte un valor numerico a tipo String y evalua si su cantidad de digitos es menor o igual al limite maximo permitido.
 
 ```javascript
 function validarLongitud(numero, maxLongitud) {
@@ -86,7 +84,7 @@ if (!validarLongitud(codigoEstudiante, 5)) {
 
 #### 4. calcularEdad(fechaNacimiento)
 
-Calcula de forma exacta la edad de una persona restando el ano de nacimiento al ano actual y ajustando el resultado si la persona no ha cumplido anos en el mes en curso.
+Calcula de forma exacta la edad de una persona restando el año de nacimiento al año actual y ajustando el resultado si la persona no ha cumplido años en el mes en curso.
 
 ```javascript
 function calcularEdad(fechaNacimiento) {
@@ -110,7 +108,7 @@ console.log("Resultado matematico: El alumno tiene " + edadCalculada + " anos.")
 
 #### 5. esMayorDeEdad(fechaNacimiento)
 
-Determina si la fecha de nacimiento ingresada corresponde a un usuario con 18 anos o mas apoyandose en la funcion de calculo de edad.
+Determina si la fecha de nacimiento ingresada corresponde a un usuario con 18 años o mas apoyandose en la funcion de calculo de edad.
 
 ```javascript
 function esMayorDeEdad(fechaNacimiento) {
@@ -128,7 +126,7 @@ if (esMayorDeEdad(fechaInput)) {
 
 #### 6. validarPassword(password)
 
-Evalua que la contrasena cumpla con criterios de seguridad: minimo 8 caracteres, una mayuscula, una minuscula, un numero y un caracter especial.
+Evalua que la contraseña cumpla con criterios de seguridad: minimo 8 caracteres, una mayuscula, una minuscula, un numero y un caracter especial.
 
 ```javascript
 function validarPassword(password) {
@@ -144,14 +142,12 @@ if (!validarPassword(passInput)) {
 
 ```
 
----
 
-### Funciones de la Seccion Libre 
+### Otras Funciones Implementadas  
 
 #### 1. validarCURP(curp)
 
-* **Que hace:** Transforma la cadena a mayusculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres de la RENAPO en Mexico mediante expresiones regulares.
-* **Por que es importante:** La CURP es el identificador unico del estudiante para tramites oficiales como la titulacion. Validar su formato desde el navegador evita errores de captura humanos antes de registrar el dato en la base de datos.
+* Transforma la cadena a mayusculas y valida que la CURP cumpla con el formato estructural oficial de 18 caracteres. 
 
 ```javascript
 function validarCURP(curp) {
@@ -169,8 +165,8 @@ if (!validarCURP(curpInput)) {
 
 #### 2. validarSemestre(anioIngreso, semestreActual)
 
-* **Que hace:** Aplica una regla de consistencia temporal en JavaScript. Evalua la diferencia entre el ano actual (2026) y el ano de ingreso del alumno para determinar el limite maximo de semestres que ha podido cursar de forma logica (maximo 2 semestres por ano fisico mas un margen de tolerancia).
-* **Por que es importante:** Evita incongruencias logicas en el expediente del estudiante. Impide, por ejemplo, que un usuario que ingreso en el ano 2025 pueda registrarse en un 8vo semestre, bloqueando datos matematicamente imposibles.
+*  Aplica una regla de consistencia temporal en JavaScript. Evalua la diferencia entre el año actual (2026) y el año de ingreso del alumno para determinar el limite maximo de semestres que ha podido cursar de forma logica (maximo 2 semestres por año fisico más un margen de tolerancia).
+
 
 ```javascript
 function validarSemestre(anioIngreso, semestreActual) {
@@ -195,8 +191,8 @@ if (!validarSemestre(2025, 8)) {
 
 #### 3. validarHorarioEscolar(horaInicio, horaFin)
 
-* **Que hace:** Convierte las cadenas de tiempo a minutos absolutos para asegurar que el horario pertenezca a la jornada universitaria (07:00 a 20:00 hrs) y que la hora de salida no sea previa a la de entrada.
-* **Por que es importante:** Previene errores de planeacion o de captura por parte del alumno, evitando horarios invertidos o registros fuera de las horas de operacion del plantel.
+*  Convierte las cadenas de tiempo a minutos absolutos para asegurar que el horario pertenezca a la jornada universitaria (07:00 a 20:00 hrs) y que la hora de salida no sea previa a la de entrada.
+
 
 ```javascript
 function validarHorarioEscolar(horaInicio, horaFin) {
@@ -226,8 +222,8 @@ if (!validarHorarioEscolar("08:00", "13:00")) {
 
 #### 4. validarPesoArchivo(archivoObjeto, maxMB)
 
-* **Que hace:** Accede directamente a la propiedad de tamano binario del archivo seleccionado en el DOM para verificar que no sobrepase el peso en Megabytes configurado.
-* **Por que es importante:** Funciona como un filtro de optimizacion de almacenamiento. Al limitar el PDF de la carga academica a un maximo de 2 MB, se protege el servidor de archivos demasiado pesados que ralentizan el sistema y consumen almacenamiento de forma innecesaria.
+* Accede directamente a la propiedad de tamaño binario del archivo seleccionado en el DOM para verificar que no sobrepase el peso en Megabytes configurado.
+
 
 ```javascript
 function validarPesoArchivo(archivoObjeto, maxMB) {
