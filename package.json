@@ -1,0 +1,21 @@
+{
+  "name": "utileria",
+  "version": "1.0.0",
+  "description": "```markdown\r Librería para el uso en Validación de Datos para Formularios Universitarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yareliyazmin16/utileria-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yareliyazmin16/utileria-js/issues"
+  },
+  "homepage": "https://github.com/yareliyazmin16/utileria-js#readme"
+}

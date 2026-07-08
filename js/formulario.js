@@ -9,6 +9,8 @@ function procesarFormulario() {
     var HoraFin = document.getElementById("horaFin").value;
     var archivo = document.getElementById("cargaAcademica");
 
+    
+    
     if (!Nombre || !numCodigo || !Curp || !numAnio || !numSemestre || !Fecha || !HoraInicio || !HoraFin) {
         console.log("Error: Campos del formulario incompletos");
         alert("Completa todos los campos del formulario");
@@ -17,9 +19,12 @@ function procesarFormulario() {
 
     if (archivo.files.length === 0) {
         console.log("Error: Archivo no adjuntado");
-        alert("Por favor adzjunta tu archivo de Carga Académica");
+        alert("Por favor adjunta tu archivo de Carga Académica");
         return;
     }
+
+
+
 
     if (!soloLetras(Nombre)) {
         console.log("Error: Nombre invalido - " + Nombre);
@@ -39,11 +44,15 @@ function procesarFormulario() {
         return;
     }
 
+
+
     if (!validarSemestre(numAnio, numSemestre)) {
         console.log("Error: Incoherencia en semestre y año de ingreso - Año: " + numAnio + ", Semestre: " + numSemestre);
         alert("El semestre ingresado no concuerda con el año de ingreso");
         return;
     }
+
+
 
     if (!validarHorarioEscolar(HoraInicio, HoraFin)) {
         console.log("Error: Horario escolar fuera de rango o invertido - Inicio: " + HoraInicio + ", Fin: " + HoraFin);
@@ -57,6 +66,13 @@ function procesarFormulario() {
         alert("El archivo supera el peso máximo permitido de 2 MB.");
         return;
     }
+
+
+
+
+
+
+
 
     var edadCalculada = calcularEdad(Fecha);
     var mayorDeEdad = esMayorDeEdad(Fecha); 
@@ -82,6 +98,8 @@ function procesarFormulario() {
     document.getElementById("modalTexto").innerHTML = mensajeModal;
     document.getElementById("Modal").style.display = "flex";
 }
+
+
 
 function cerrarModal() {
     console.log("Ventana modal cerrada");

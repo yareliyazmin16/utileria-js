@@ -40,27 +40,38 @@ function validarPassword(password) {
 
 
 
+
+
+
+
 function validarCURP(curp) {
     var expresion = /^[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z0-9]\d$/;
     return expresion.test(curp.toUpperCase());
 }
 
+// 4 LETRAS POR EL NOMBRE 
+// 6 DIGITOS NUMERICOS PARA LA FECHA DE NACIMIENTO 
+// H O M PARA GENERO 
+// 5 LETRAS MAYUSCULAS 
+// CARACTER O NUMERO 
+
 function validarSemestre(anioIngreso, semestreActual) {
-    var anioActual = 2026; 
+    var anioActual = new Date().getFullYear(); 
     var semestre = parseInt(semestreActual);
     var ingreso = parseInt(anioIngreso);
 
-    if (semestre < 1 || semestre > 12) return false;
+    if (semestre < 1 || semestre > 12) return false; // SI EL SEMESRE ES MENOR A 0  O MAYOR A 12 
     var aniosTranscurridos = anioActual - ingreso;
-    if (aniosTranscurridos < 0) return false;
+    if (aniosTranscurridos < 0) return false;  // SI LA DIFERENCIA ES MENOR A 0 SE RETORNA FALSE 
 
     var maxSemestrePosible = (aniosTranscurridos * 2) + 2;
     return semestre <= maxSemestrePosible;
 }
 
 function validarHorarioEscolar(horaInicio, horaFin) {
-    if (!horaInicio || !horaFin) return false;
+    if (!horaInicio || !horaFin) return false; // SI DEJA EN BLANCO LOS CAMPOS 
 
+    // CONVERTIR NUMEROS Y MULTIPLICAR PARA CONVERTIR A MINUTOS 
     var partesInicio = horaInicio.split(":");
     var partesFin = horaFin.split(":");
     
@@ -70,7 +81,7 @@ function validarHorarioEscolar(horaInicio, horaFin) {
     var limiteInferior = 7 * 60;   
     var limiteSuperior = 20 * 60;  
 
-    if (minutosInicio >= minutosFin) return false;
+    if (minutosInicio >= minutosFin) return false; // SI LA HORA DE INICIO ES MENOR A LA DE SALIDA 
 
     if (minutosInicio < limiteInferior || minutosFin > limiteSuperior) return false;
 
